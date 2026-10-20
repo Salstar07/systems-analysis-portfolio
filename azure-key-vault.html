@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#102a34">
+  <meta name="description" content="Evaluating machine-secret protection using controlled tests, identity boundaries, audit evidence and recovery exercises.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Secure secrets &amp; recoverable operations | Saalima Barakat">
+  <meta property="og:description" content="Evaluating machine-secret protection using controlled tests, identity boundaries, audit evidence and recovery exercises.">
+  <meta property="og:image" content="../assets/og-card.svg">
+  <title>Secure secrets &amp; recoverable operations | Saalima Barakat</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/capacity-rules.js" defer></script>
+  <script src="../assets/main.js" defer></script>
+  
+</head>
+<body class="">
+<a href="#main" class="skip">Skip to content</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="identity" href="../index.html" aria-label="Saalima Barakat — Home"><span class="monogram">sb<span class="monogram-point">.</span></span><span class="identity-text"><strong>Saalima Barakat</strong><small>Systems Analyst</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="nav-links" id="site-nav" aria-label="Site navigation">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#demo">Interactive example</a>
+      <a href="../index.html#approach">Approach</a>
+      <a href="../index.html#about">About</a>
+      <a class="nav-cta" href="../index.html#contact">Get in touch <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="case-page case-theme-blue">
+  <div class="case-header">
+    <div class="container">
+      <div class="crumb"><a href="../index.html#work">← Selected work</a><span>/</span><span>Case 02 of 04</span></div>
+      <div class="case-hero-grid"><div><div class="section-kicker case-kicker">SECURITY / TECHNICAL EVALUATION · Sandbox proof of concept</div><h1>Secure secrets &amp; recoverable operations</h1><p class="case-deck">Evaluating machine-secret protection using controlled tests, identity boundaries, audit evidence and recovery exercises.</p><div class="tag-line"><span>Azure Key Vault</span><span>Managed identity</span><span>Azure Functions</span><span>RBAC</span><span>Private networking</span><span>Audit logging</span></div></div><div class="case-hero-art" aria-label="Conceptual diagram, not an original employer artifact"><div class="case-visual-index">02 <span>/ 04</span></div>
+      <div class="big-art-network"><span>Runtime</span><b>→</b><span>Minimum grant</span><b>←</b><span>Operator</span></div>
+      
+      <span class="art-disclosure">Independent concept illustration</span></div></div>
+      <div class="case-statline"><div><small>CONTEXT</small><strong>CivilSE · technical options assessment</strong></div><div><small>MY CONTRIBUTION</small><strong>Technical assessment · controlled testing · security design · recommendation</strong></div><div><small>STATUS</small><strong>Sandbox proof of concept</strong></div></div>
+    </div>
+  </div>
+  <div class="container case-content-grid">
+    <div class="case-story">
+      <section class="case-block" id="challenge"><span class="section-kicker">01 / THE PROBLEM</span><h2>What needed<br><em>to change?</em></h2><p class="big-prose">A protected credential store is useful only when applications can consume secrets safely and authorised support personnel can recover service without creating excessive permanent privileges.</p></section>
+      <section class="case-block" id="role"><span class="section-kicker">02 / THE CONTRIBUTION</span><h2>What I worked on.</h2><p class="big-prose">Conducted security assessment and hands-on sandbox validation, including protected runtime access and a bounded synthetic-secret recovery rehearsal. Documented control results, exceptions and recommended operational boundaries for management review.</p><div class="case-note"><span>SCOPE OF CONTRIBUTION</span><p>These accounts distinguish work I contributed from wider team outcomes and explain which results were actually demonstrated. Original employer and university records remain with their authorised owners.</p></div></section>
+      <section class="case-block" id="decision"><span class="section-kicker">03 / THE JUDGEMENT</span><h2>Decisions that mattered.</h2><div class="decision-list"><div class="decision"><span>01</span><div><h3>Eliminate secrets when possible</h3><p>Prefer managed identity or supported federation where credentials are unnecessary.</p></div></div><div class="decision"><span>02</span><div><h3>Separate runtime and operator authority</h3><p>A consuming application needs only its data role, while lifecycle repair and access administration require distinct approval.</p></div></div><div class="decision"><span>03</span><div><h3>Prove recovery, not merely configuration</h3><p>Exercise a controlled rotate/recover/regrant path and preserve traceable audit evidence and limits.</p></div></div></div></section>
+      <section class="case-block" id="evidence"><span class="section-kicker">04 / THE EVIDENCE</span><h2>What the record supports.</h2><p>Each evidence item identifies its scope. A recorded activity, a test result and a production business outcome are not interchangeable.</p><div class="evidence-table-wrap"><table class="evidence-table"><thead><tr><th scope="col">Evidence class</th><th scope="col">What it establishes</th><th scope="col">Scope</th></tr></thead><tbody><tr><td><strong>Proof of concept</strong></td><td>Private-network consumption and role-bound access checks</td><td><span class="evidence-state">Sandbox-tested</span></td></tr><tr><td><strong>Recovery rehearsal</strong></td><td>Synthetic rotation, soft-delete/recover, identity rebind, audit retrieval</td><td><span class="evidence-state">Bounded test passed</span></td></tr><tr><td><strong>Decision support</strong></td><td>Operating model, cost evidence, risks and follow-up items</td><td><span class="evidence-state">Assessment recorded</span></td></tr></tbody></table></div></section>
+      <section class="case-block" id="outcome"><span class="section-kicker">05 / OUTCOME & LIMITS</span><h2>What I can<br><em>defend.</em></h2><div class="outcome-grid"><div><span>REPORTED OUTCOME</span><p>The adoption approach for residual machine credentials was accepted following the technical assessment. This was an operating-direction decision—not verification of a production vault deployment or unrestricted credential migration.</p></div><div><span>BOUNDARY / LIMITATION</span><p>The controlled rehearsal did not prove every disaster-recovery scenario or a fully reduced-privilege operational staff role. Sensitive tenant, network and control specifics are intentionally excluded.</p></div></div><div class="next-step"><span>WHAT COMES NEXT</span><p>Translate the accepted approach into workload-specific operational records, approvals and scoped deployment controls.</p></div></section>
+      <div class="case-end"><a class="button button-dark" href="../index.html#work">← Back to all projects</a></div>
+    </div>
+    <aside class="case-sidebar"><div class="sidebar-card"><span class="section-kicker">A QUESTION WORTH ASKING</span><blockquote>“How do you separate application access from recovery authority?”</blockquote><div class="sidebar-rule"></div><strong>Proof over polish.</strong><p>I explain the requirement, decision, test and limits—not only the interface or tools.</p></div><div class="sidebar-toc"><span>IN THIS CASE</span><a href="#challenge">01 The problem</a><a href="#role">02 My contribution</a><a href="#decision">03 Decisions</a><a href="#evidence">04 Evidence</a><a href="#outcome">05 Outcome & limits</a></div><p class="sidebar-disclosure">Concept diagram only: runtime reads and operational privileges remain distinct.</p></aside>
+  </div>
+  <section class="case-next-section"><div class="container"><span class="section-kicker">CONTINUE EXPLORING</span><div class="next-case-row"><div><small>NEXT CASE / 03</small><h2>Credential governance under real constraints</h2></div><a class="round-next" href="credential-governance.html" aria-label="Read next case: Credential governance under real constraints">↗</a></div></div></section>
+</article>
+
+</main>
+<footer class="footer">
+  <div class="container foot-grid">
+    <div><span class="foot-name">Saalima Barakat</span><span class="foot-sub">Systems analysis · Applied technology · Evidence-led delivery</span></div>
+    <div class="foot-right"><a href="../index.html#work">Selected work</a><a href="mailto:0719saalima@gmail.com?subject=Systems%20Analyst%20opportunity">Email</a><a href="#main">Back to top ↑</a></div>
+  </div>
+  <div class="container foot-base"><span>© 2026 Saalima Barakat</span><span>Independent illustrations and demos · No live company integrations or student records</span></div>
+</footer>
+</body>
+</html>

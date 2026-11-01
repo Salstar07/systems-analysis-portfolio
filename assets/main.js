@@ -55,7 +55,7 @@
         const count = cards.filter((card) => !card.hidden).length;
         const label =
           type === "all"
-            ? "all projects"
+            ? "all featured projects"
             : btn.textContent.trim().toLowerCase();
         filterStatus.textContent =
           count +

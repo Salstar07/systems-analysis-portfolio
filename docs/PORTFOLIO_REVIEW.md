@@ -10,6 +10,18 @@ Recruiter-facing gaps were a professional identity spread across sections, no de
 
 The site repeated generic headings and evidence caveats across the four cases. The refresh replaces generic narrative with project-specific objectives, requirements, technical approaches and trade-offs while retaining the actual limits on outcomes. Original source materials and employer test reports were not independently supplied or reviewed in this task. Existing repository accounts and the owner's statements are the content basis, not independent verification of internal project results.
 
+## Additional CivilSE applications and automation
+
+The portfolio now covers seven projects. The original four remain featured, followed by **More Systems & Automation Projects** with Employee Check-In, Teams Content Archiving & PowerShell Automation, and Vehicle Booking cards. The experience and skills sections include the owner-confirmed Canvas application and PowerShell work.
+
+All seven case studies use Business Problem → My Contribution → Requirements → Solution Design → Implementation → Testing → Evidence → Outcomes → Limitations. Claim-specific Verified, Documented, Illustrative and Pending verification badges include their supporting basis. Existing internal-result accounts remain described as documented reports, not independently reviewed test records.
+
+The three new pages include dedicated evidence checklists. [The consolidated checklist](CIVILSE_EVIDENCE_CHECKLISTS.md) identifies approved requirements, sanitised technical artifacts, execution evidence, validation and acceptance records needed for stronger claims. In particular:
+
+- Check-in: owner confirmation supports successful SharePoint logging and Teams notifications after connection-reference corrections within reported tests. Submission, flow execution and delivery remain separate outcomes. Offline/location/weather/navigation and broad reliability claims are unverified.
+- Teams archiving: PowerShell work is owner-confirmed. Actual scope, APIs/modules, original scripts, logs, archive structure, completeness and compliance are not supplied or inferred.
+- Vehicle booking: Canvas design/development and business purpose are owner-confirmed. Sources/connectors, booking rules, approval/conflict/notification features and deployment remain pending. The vehicle/reservation illustration is synthetic.
+
 ## Changes for review
 
 - Retained the visual identity, four case-study routes, static hosting structure and original capacity-rule implementation.
@@ -45,12 +57,14 @@ Validation completed on 1 November 2026 with Python 3.12.14, Node.js 24.19.0, Pl
 
 - All 14 existing capacity-rule checks passed in Node and Chromium; all three scenarios, valid boundary/half-hour input, invalid input recovery and the public test button passed.
 - Keyboard project filtering, mobile menu focus/dismissal/resize behaviour, clipboard success/denied/unavailable paths and no-JavaScript mobile navigation passed.
-- All five pages loaded under `/systems-analysis-portfolio/`. Static checks validated 150 local references; browser checks validated 55 unique link/asset/fragment URLs.
-- No document overflow across all five pages at widths 320, 375, 540, 768, 800, 1024, 1280, 1440 and 1920px. Desktop/mobile screenshots were captured and visually inspected.
-- Ten axe scans (five pages × desktop/mobile) reported zero automated WCAG A/AA violations. Manual contrast checks covered representative text in gradient panels and tables; axe retains incomplete contrast items for some decorative and scrolled content.
+- All eight pages loaded under `/systems-analysis-portfolio/`. Static checks validated 292 local references; browser checks validated 103 unique link/asset/fragment URLs.
+- No document overflow across all eight pages at widths 320, 375, 540, 768, 800, 1024, 1280, 1440 and 1920px. Desktop/mobile screenshots were captured and visually inspected.
+- Sixteen axe scans (eight pages × desktop/mobile) reported zero automated WCAG A/AA violations. Manual contrast checks covered representative text in gradient panels and tables; axe retains incomplete contrast items for some decorative and scrolled content.
+- A focused vehicle-illustration recheck at 320, 375, 768 and 1440px confirmed all three columns fit without horizontal scrolling after the mobile table refinement; four additional axe scans passed.
+- All three additional homepage cards work by keyboard, remain visible during featured filtering, and link to dedicated checklists. All seven mobile case-study contents menus were exercised by keyboard.
 - No browser console errors or uncaught exceptions. JavaScript syntax and `git diff --check` passed.
 
- `python3 tests/static-checks.py` checks all five pages and their local references, GitHub Pages metadata, JavaScript syntax and the original 14 rules. `tests/browser-checks.cjs` checks the interactive flows and responsive behaviour with Chromium, and runs axe-core when available.
+`python3 tests/static-checks.py` checks all eight pages and their local references, GitHub Pages metadata, JavaScript syntax and the original 14 rules. `tests/browser-checks.cjs` checks the interactive flows and responsive behaviour with Chromium, and runs axe-core when available.
 
 Automated accessibility scans and visual inspection do not establish full WCAG conformance. Human screen-reader review, real device/browser testing, delivery through a configured email client and third-party social-cache rendering remain outside automated coverage. The site uses `mailto:` plus a selectable/copyable address, not a contact-form backend.
 

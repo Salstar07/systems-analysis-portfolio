@@ -9,7 +9,9 @@ const path = require('node:path');
 const { chromium } = require('playwright');
 const base = process.env.PORTFOLIO_BASE_URL || 'http://127.0.0.1:8000/systems-analysis-portfolio/';
 const output = process.env.QA_OUTPUT_DIR || '/tmp/portfolio-qa/results';
-const routes = ['', 'work/resource-planning.html', 'work/azure-key-vault.html', 'work/credential-governance.html', 'work/student-risk.html'];
+const additionalRoutes = ['work/employee-check-in.html', 'work/teams-archiving.html', 'work/vehicle-booking.html'];
+const routes = ['', 'work/resource-planning.html', 'work/azure-key-vault.html', 'work/credential-governance.html', 'work/student-risk.html', ...additionalRoutes];
+const caseSections = ['challenge', 'role', 'approach', 'solution', 'implementation', 'testing', 'evidence', 'outcome', 'limitations'];
 let axePath = process.env.AXE_CORE_PATH;
 if (!axePath) { try { axePath = require.resolve('axe-core/axe.min.js'); } catch {} }
 const results = { base, browser: 'Chromium', passed: [], accessibility: [], errors: [] };
@@ -95,11 +97,26 @@ async function checkA11y(page, name) {
       const filter = page.locator(`[data-filter="${category}"]`);
       await filter.focus();
       await page.keyboard.press('Enter');
-      assert.equal(await page.locator('.project-card:visible').count(), count);
+      assert.equal(await page.locator('.project-card[data-category]:visible').count(), count);
+      assert.equal(await page.locator('#more-projects .additional-project-card:visible').count(), 3, 'Featured filters must not hide additional projects');
       assert.equal(await filter.getAttribute('aria-pressed'), 'true');
       assert.match(await text(page, '#filter-status'), new RegExp('^' + count + ' case'));
     }
-    passed('all four project filters work by keyboard and announce results');
+    passed('all four featured filters work by keyboard and announce results; three additional projects remain visible');
+    for (const route of additionalRoutes) {
+      const cardLink = page.locator(`#more-projects .additional-project-card a[href="${route}"]`);
+      assert.equal(await cardLink.count(), 1, route + ' homepage card');
+      await cardLink.focus();
+      await page.keyboard.press('Enter');
+      await page.waitForURL(new URL(route, base).href);
+      assert.ok(await page.locator('h1').isVisible());
+      assert.ok(await page.locator('#evidence-checklist').isVisible());
+      assert.ok(await page.locator('#evidence .evidence-checklist li').count() >= 4, route + ' evidence checklist');
+      const checklistItems = await page.locator('#evidence .evidence-checklist li').allTextContents();
+      assert.ok(checklistItems.every(item => item.trim().length > 0), route + ' nonempty evidence requirements');
+      await page.goto(base);
+    }
+    passed('all three additional project cards navigate by keyboard to dedicated pages and evidence checklists');
 
     // Stub the browser permission boundary to cover success and rejection deterministically.
     await page.evaluate(() => {
@@ -155,6 +172,13 @@ async function checkA11y(page, name) {
       assert.equal(routeResponse.status(), 200, route);
       assert.equal(await page.locator('h1').count(), 1, route);
       assert.ok(await page.locator('h1').isVisible());
+      if (route) {
+        const sectionOrder = await page.locator('section[id]').evaluateAll((sections, required) => sections.map(section => section.id).filter(id => required.includes(id)), caseSections);
+        assert.deepEqual(sectionOrder, caseSections, route + ' consistent case-study structure');
+        const evidenceLabels = await page.locator('.evidence-badge').allTextContents();
+        assert.ok(evidenceLabels.length > 0, route + ' evidence indicators');
+        assert.ok(evidenceLabels.every(label => /^(Verified|Documented|Illustrative|Pending verification)(?:\s|·|$)/.test(label.trim())), route + ' approved evidence status labels');
+      }
       const references = await page.locator('a[href], link[href], script[src], img[src]').evaluateAll(els => els.map(el => ({
         url: new URL(el.getAttribute('href') || el.getAttribute('src'), location.href).href,
         tag: el.tagName
@@ -196,13 +220,23 @@ async function checkA11y(page, name) {
         assert.ok(await page.locator('.case-mobile-toc nav').isVisible(), route + ' mobile contents');
         await page.keyboard.press('Tab');
         assert.ok(await page.locator('.case-mobile-toc nav a').first().evaluate(a => document.activeElement === a));
+        for (const section of caseSections) {
+          const sectionLink = page.locator(`.case-mobile-toc nav a[href="#${section}"]`);
+          assert.equal(await sectionLink.count(), 1, route + ' mobile section link ' + section);
+          await sectionLink.focus();
+          await page.keyboard.press('Enter');
+          await page.waitForURL(url => url.hash === '#' + section);
+          assert.equal(new URL(page.url()).hash, '#' + section);
+          assert.ok(await page.locator('#' + section).isVisible());
+        }
       }
     }
-    passed('all five pages load at the GitHub Pages base path; ' + checkedLinks.size + ' local links/assets/fragments verified');
-    passed('all five pages have no document overflow at nine widths from 320 to 1920 pixels; desktop/mobile screenshots saved');
+    passed('all seven mobile case-study navigation menus link to every required section by keyboard');
+    passed('all eight pages load at the GitHub Pages base path; ' + checkedLinks.size + ' local links/assets/fragments verified');
+    passed('all eight pages have no document overflow at nine widths from 320 to 1920 pixels; desktop/mobile screenshots saved');
     if (axePath) {
       assert.ok(results.accessibility.every(r => r.violations.length === 0), 'Accessibility violations remain; inspect results.json');
-      passed('axe WCAG 2 A/AA, 2.1 A/AA and 2.2 AA: zero automated violations across five pages at desktop and mobile');
+      passed('axe WCAG 2 A/AA, 2.1 A/AA and 2.2 AA: zero automated violations across eight pages at desktop and mobile');
     }
     else console.log('SKIP axe-core unavailable; set AXE_CORE_PATH or install it in test tooling');
     assert.deepEqual(results.errors, [], 'Browser errors: ' + results.errors.join('\n'));

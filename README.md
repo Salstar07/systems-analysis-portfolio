@@ -1,6 +1,6 @@
 # Saalima Barakat — Systems Analysis Portfolio
 
-A static, dependency-free portfolio for systems analysis, Microsoft Power Platform and business applications work. The site retains its original teal/sage visual identity and four case-study URLs.
+A static, dependency-free portfolio for systems analysis, Microsoft Power Platform and business applications work. The site retains its original teal/sage visual identity and four featured case-study URLs, with three additional CivilSE application and automation cases.
 
 ## Run locally
 
@@ -49,5 +49,7 @@ The browser suite exercises scenarios, validation, filters, keyboard navigation,
 - Social metadata uses `assets/og-card.png`; `assets/og-card.svg` remains its editable source. Update both when changing the social artwork.
 - Add official credential/profile URLs and a résumé only after the owner supplies them. AB-400 exam completion was confirmed by Saalima; official certification credential verification is pending.
 - Keep outcomes within documented scope. Do not add private data, internal source code, unapproved screenshots or unverified metrics.
+
+See the [CivilSE evidence checklists](docs/CIVILSE_EVIDENCE_CHECKLISTS.md) for material needed to substantiate the three additional projects. All seven cases use a common problem-to-limitations structure and claim-specific evidence indicators.
 
 See [review notes](docs/PORTFOLIO_REVIEW.md) for the audit, content boundaries and confirmation items. Work is on `feature/portfolio-recruiter-refresh`; merging and live publication require the owner's review.

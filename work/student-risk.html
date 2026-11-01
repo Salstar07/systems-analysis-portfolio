@@ -134,7 +134,7 @@
           <div class="container">
             <div class="crumb">
               <a href="../index.html#work">← Selected work</a><span>/</span
-              ><span>Case 04 of 04</span>
+              ><span>Case 04 of 07</span>
             </div>
             <div class="case-hero-grid">
               <div>
@@ -159,7 +159,7 @@
                 role="img"
                 aria-label="Concept illustration: source information flows into a data model and then reporting insight."
               >
-                <div class="case-visual-index">04 <span>/ 04</span></div>
+                <div class="case-visual-index">04 <span>/ 07</span></div>
                 <div class="big-art-data">
                   <span>Sources</span><b>→</b><span>Model</span><b>→</b
                   ><span>Insight</span>
@@ -191,23 +191,23 @@
           <details>
             <summary>Explore this case study</summary>
             <nav aria-label="Case study sections">
-              <a href="#challenge">01 Problem &amp; objectives</a>
+              <a href="#challenge">01 Business problem</a>
               <a href="#role">02 My contribution</a>
               <a href="#approach">03 Requirements</a>
-              <a href="#solution">04 Technical approach</a>
-              <a href="#decision">05 Decisions</a>
-              <a href="#evidence">06 Testing &amp; evidence</a>
-              <a href="#outcome">07 Outcomes &amp; limits</a>
-              <a href="#skills">08 Skills demonstrated</a>
+              <a href="#solution">04 Solution design</a>
+              <a href="#implementation">05 Implementation</a>
+              <a href="#testing">06 Testing</a>
+              <a href="#evidence">07 Evidence</a>
+              <a href="#outcome">08 Outcomes</a>
+              <a href="#limitations">09 Limitations</a>
+              <a href="#skills">Skills demonstrated</a>
             </nav>
           </details>
         </div>
         <div class="container case-content-grid">
           <div class="case-story">
             <section class="case-block" id="challenge">
-              <span class="section-kicker"
-                >01 / BUSINESS PROBLEM &amp; OBJECTIVES</span
-              >
+              <span class="section-kicker">01 / BUSINESS PROBLEM</span>
               <h2>Bring the information<br /><em>into context.</em></h2>
               <p class="big-prose">
                 Student information distributed across multiple sources makes
@@ -269,9 +269,7 @@
               </div>
             </section>
             <section class="case-block" id="approach">
-              <span class="section-kicker"
-                >03 / REQUIREMENTS &amp; ANALYSIS</span
-              >
+              <span class="section-kicker">03 / REQUIREMENTS</span>
               <h2>Define what the report<br /><em>needs to answer.</em></h2>
               <p>
                 The analytical approach linked stakeholder questions to source
@@ -298,7 +296,7 @@
               </ul>
             </section>
             <section class="case-block" id="solution">
-              <span class="section-kicker">04 / TECHNICAL APPROACH</span>
+              <span class="section-kicker">04 / SOLUTION DESIGN</span>
               <h2>
                 From distributed sources<br /><em>to reporting insight.</em>
               </h2>
@@ -319,62 +317,85 @@
                   </li>
                 </ol>
                 <figcaption>
+                  <span class="evidence-badge evidence-illustrative"
+                    >Illustrative</span
+                  >
                   Independent conceptual illustration of the reporting approach.
                   No real student records, model predictions or production
                   dashboards are shown.
                 </figcaption>
               </figure>
-            </section>
-            <section class="case-block" id="decision">
-              <span class="section-kicker"
-                >05 / DECISIONS &amp; TRADE-OFFS</span
-              >
-              <h2>Decisions that mattered.</h2>
-              <div class="decision-list">
-                <div class="decision">
-                  <span>01</span>
-                  <div>
-                    <h3>Resolve the data model before interpreting risk</h3>
-                    <p>
-                      Identity, source completeness and reporting definitions
-                      determine what a combined view can support.
-                    </p>
+              <div id="decision" class="case-objectives">
+                <h3>Decisions &amp; trade-offs</h3>
+                <div class="decision-list">
+                  <div class="decision">
+                    <span>01</span>
+                    <div>
+                      <h3>Resolve the data model before interpreting risk</h3>
+                      <p>
+                        Identity, source completeness and reporting definitions
+                        determine what a combined view can support.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="decision">
-                  <span>02</span>
-                  <div>
-                    <h3>Keep reporting understandable to stakeholders</h3>
-                    <p>
-                      Interactive views should help staff explore patterns while
-                      retaining uncertainty and the need for professional
-                      judgement.
-                    </p>
+                  <div class="decision">
+                    <span>02</span>
+                    <div>
+                      <h3>Keep reporting understandable to stakeholders</h3>
+                      <p>
+                        Interactive views should help staff explore patterns
+                        while retaining uncertainty and the need for
+                        professional judgement.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="decision">
-                  <span>03</span>
-                  <div>
-                    <h3>Require evidence for predictive claims</h3>
-                    <p>
-                      A predictive component needs a documented method,
-                      evaluation and limitations. An intention to support
-                      earlier intervention is not a measured improvement in
-                      retention.
-                    </p>
+                  <div class="decision">
+                    <span>03</span>
+                    <div>
+                      <h3>Require evidence for predictive claims</h3>
+                      <p>
+                        A predictive component needs a documented method,
+                        evaluation and limitations. An intention to support
+                        earlier intervention is not a measured improvement in
+                        retention.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
+            <section class="case-block" id="implementation">
+              <span class="section-kicker">05 / IMPLEMENTATION</span>
+              <h2>Putting the approach<br /><em>into practice.</em></h2>
+              <p>
+                My contribution covered multi-source data consolidation,
+                modelling and interactive reporting design within the academic
+                team project. The public account supports that work and its
+                purpose; it does not specify the original implementation stack,
+                model algorithm or deployment arrangement.
+              </p>
+            </section>
+            <section class="case-block" id="testing">
+              <span class="section-kicker">06 / TESTING</span>
+              <h2>What was checked.</h2>
+              <p>
+                Testing and model evaluation require the original academic
+                artifacts and validation records. The public project description
+                alone does not establish executed test cases, predictive
+                accuracy or dashboard acceptance results. Any stronger claim
+                should be tied to a permitted evaluation record and its
+                limitations.
+              </p>
+            </section>
             <section class="case-block" id="evidence">
-              <span class="section-kicker">06 / TESTING &amp; VALIDATION</span>
+              <span class="section-kicker">07 / EVIDENCE</span>
               <h2>Evidence with<br /><em>a defined scope.</em></h2>
               <p>
-                The public project description supports the academic objective,
-                stakeholder collaboration and reporting contribution. Original
-                model, dashboard and evaluation details remain in the academic
-                record; this site cannot verify individual test results or
-                predictive performance from that description.
+                The documented indicator refers to the existing academic project
+                description. The original model, dashboard and evaluation
+                records have not been independently reviewed for this portfolio
+                update. Illustrations explain the concept and cannot
+                substantiate predictive or student-outcome claims.
               </p>
               <div
                 class="evidence-table-wrap"
@@ -384,35 +405,41 @@
               >
                 <table class="evidence-table">
                   <caption class="visually-hidden">
-                    Curtin Student Risk Reporting System: reported evidence and
-                    its limits
+                    Evidence, status and supporting basis for this case study
                   </caption>
                   <thead>
                     <tr>
                       <th scope="col">Evidence</th>
                       <th scope="col">What it supports</th>
-                      <th scope="col">Scope</th>
+                      <th scope="col">Indicator &amp; basis</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <th scope="row">Project account</th>
                       <td>
-                        Academic objective, stakeholders and intended reporting
-                        capabilities.
+                        Academic objective, stakeholder collaboration and
+                        reporting contribution described in the portfolio.
                       </td>
                       <td>
-                        <span class="evidence-state">Project description</span>
+                        <span class="evidence-badge evidence-documented"
+                          >Documented</span
+                        >
+                        <p>Published project description</p>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">Technical artifacts</th>
                       <td>
-                        Original model, dashboard and evaluation details are not
-                        reproduced here.
+                        The original model, dashboard, source mappings and
+                        evaluation details have not been supplied for this
+                        update.
                       </td>
                       <td>
-                        <span class="evidence-state">Academic record</span>
+                        <span class="evidence-badge evidence-pending"
+                          >Pending verification</span
+                        >
+                        <p>Supporting academic artifacts required</p>
                       </td>
                     </tr>
                     <tr>
@@ -422,9 +449,23 @@
                         original deliverable.
                       </td>
                       <td>
-                        <span class="evidence-state"
-                          >Independent illustration</span
+                        <span class="evidence-badge evidence-illustrative"
+                          >Illustrative</span
                         >
+                        <p>No real student records</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Predictive performance</th>
+                      <td>
+                        Method, evaluation results and model limitations require
+                        the original academic evidence.
+                      </td>
+                      <td>
+                        <span class="evidence-badge evidence-pending"
+                          >Pending verification</span
+                        >
+                        <p>No performance result claimed</p>
                       </td>
                     </tr>
                   </tbody>
@@ -432,30 +473,24 @@
               </div>
             </section>
             <section class="case-block" id="outcome">
-              <span class="section-kicker"
-                >07 / OUTCOMES &amp; LIMITATIONS</span
-              >
+              <span class="section-kicker">08 / OUTCOMES</span>
               <h2>What the work<br /><em>establishes.</em></h2>
-              <div class="outcome-grid">
-                <div>
-                  <span>REPORTED OUTCOME</span>
-                  <p>
-                    A Curtin academic project directed toward unified reporting
-                    and proactive student-support decisions, demonstrating the
-                    connection between requirements, data structure and
-                    reporting design.
-                  </p>
-                </div>
-                <div>
-                  <span>REMAINING LIMITATIONS</span>
-                  <p>
-                    No production adoption, predictive accuracy, retention
-                    improvement or independently validated student outcome is
-                    claimed. The public summary does not establish the
-                    evaluation results of the predictive component.
-                  </p>
-                </div>
-              </div>
+              <p class="big-prose">
+                A Curtin academic project directed toward unified reporting and
+                proactive student-support decisions, demonstrating the
+                connection between requirements, data structure and reporting
+                design.
+              </p>
+            </section>
+            <section class="case-block" id="limitations">
+              <span class="section-kicker">09 / LIMITATIONS</span>
+              <h2>Where the evidence<br /><em>stops.</em></h2>
+              <p>
+                No production adoption, predictive accuracy, retention
+                improvement or independently validated student outcome is
+                claimed. The public summary does not establish the evaluation
+                results of the predictive component.
+              </p>
               <div class="next-step">
                 <span>NEXT STEP</span>
                 <p>
@@ -466,7 +501,7 @@
               </div>
             </section>
             <section class="case-block" id="skills">
-              <span class="section-kicker">08 / SKILLS DEMONSTRATED</span>
+              <span class="section-kicker">SKILLS DEMONSTRATED</span>
               <h2>Capability in context.</h2>
               <ul class="case-skills">
                 <li>Business analysis</li>
@@ -478,6 +513,11 @@
                 <li>Analytical communication</li>
               </ul>
             </section>
+            <p class="evidence-guide-link">
+              <a class="text-link" href="../index.html#project-evidence"
+                >Read the evidence indicator guide</a
+              >
+            </p>
             <div class="case-end">
               <a class="button button-dark" href="../index.html#work"
                 >← Back to all projects</a
@@ -499,14 +539,16 @@
             </div>
             <nav class="sidebar-toc" aria-label="Case study sections">
               <span>IN THIS CASE</span>
-              <a href="#challenge">01 Problem &amp; objectives</a>
+              <a href="#challenge">01 Business problem</a>
               <a href="#role">02 My contribution</a>
               <a href="#approach">03 Requirements</a>
-              <a href="#solution">04 Technical approach</a>
-              <a href="#decision">05 Decisions</a>
-              <a href="#evidence">06 Testing &amp; evidence</a>
-              <a href="#outcome">07 Outcomes &amp; limits</a>
-              <a href="#skills">08 Skills demonstrated</a>
+              <a href="#solution">04 Solution design</a>
+              <a href="#implementation">05 Implementation</a>
+              <a href="#testing">06 Testing</a>
+              <a href="#evidence">07 Evidence</a>
+              <a href="#outcome">08 Outcomes</a>
+              <a href="#limitations">09 Limitations</a>
+              <a href="#skills">Skills demonstrated</a>
             </nav>
             <p class="sidebar-disclosure">
               Academic project account and independent concept illustrations; no
@@ -519,13 +561,13 @@
             <span class="section-kicker">CONTINUE EXPLORING</span>
             <div class="next-case-row">
               <div>
-                <small>NEXT CASE / 01</small>
-                <h2>CivilSE Resource &amp; Capacity Planner</h2>
+                <small>NEXT CASE / 05</small>
+                <h2>Employee Check-In Canvas Application</h2>
               </div>
               <a
                 class="round-next"
-                href="resource-planning.html"
-                aria-label="Read next case: CivilSE Resource &amp; Capacity Planner"
+                href="employee-check-in.html"
+                aria-label="Read next case: Employee Check-In Canvas Application"
                 ><svg
                   class="icon"
                   viewBox="0 0 24 24"
@@ -548,7 +590,8 @@
           >
         </div>
         <div class="foot-right">
-          <a href="../index.html#work">Selected work</a
+          <a href="../index.html#more-projects">Systems &amp; automation</a
+          ><a href="../index.html#work">Selected work</a
           ><a
             href="mailto:0719saalima@gmail.com?subject=Systems%20Analyst%20opportunity"
             >Email</a

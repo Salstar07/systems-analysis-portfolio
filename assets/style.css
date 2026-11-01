@@ -2831,3 +2831,286 @@ table {
   width: 27px;
   height: 27px;
 }
+
+/* Additional CivilSE work shares the existing palette and static card pattern. */
+.project-section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.project-section-nav a {
+  font-size: 13px;
+  font-weight: 700;
+  text-underline-offset: 5px;
+  padding-block: 7px;
+}
+.project-section-nav span {
+  font-size: 11px;
+  margin-left: 6px;
+  color: #516b5c;
+}
+.more-projects-section {
+  background: #f1f4ed;
+  border-top: 1px solid #d7e1d3;
+}
+.additional-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.additional-project-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #cbd9ca;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.additional-card-heading {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 22px 24px 15px;
+  background: #e1ece4;
+}
+.project-number {
+  font:
+    23px Georgia,
+    serif;
+  white-space: nowrap;
+  color: #305b45;
+}
+.additional-category {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  font-weight: 750;
+  line-height: 1.6;
+  color: #3e5e4d;
+}
+.additional-card-visual {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 24px 26px;
+  background: #e1ece4;
+}
+.additional-card-visual span {
+  font-size: 11px;
+  font-weight: 650;
+  padding: 8px 10px;
+  border: 1px solid #9fb9a5;
+  border-radius: 4px;
+  color: #2b513d;
+  background: #f6faf3;
+}
+.additional-card-visual i {
+  font-style: normal;
+  color: #41684e;
+}
+.additional-project-card:nth-child(2) .additional-card-heading,
+.archive-visual {
+  background: #e7e9ef;
+}
+.additional-project-card:nth-child(3) .additional-card-heading,
+.booking-visual {
+  background: #efece2;
+}
+.additional-card-body {
+  padding: 25px 24px 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.additional-card-body h3 {
+  font:
+    29px/1.18 Georgia,
+    serif;
+  margin-bottom: 17px;
+  letter-spacing: -0.025em;
+}
+.additional-card-body > p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #50675a;
+}
+.additional-card-body .additional-evidence {
+  font-size: 12px;
+  margin-top: 18px;
+  line-height: 1.8;
+  color: #4b6053;
+}
+.additional-evidence .evidence-badge {
+  display: table;
+  margin-bottom: 6px;
+}
+.technology-tags {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 7px;
+  padding: 0;
+  margin: 20px 0 24px;
+}
+.technology-tags li {
+  font-size: 11px;
+  color: #305d45;
+  border-bottom: 1px solid #c6d6c6;
+  padding: 3px 0;
+  margin-right: 7px;
+}
+.additional-card-body .project-link {
+  gap: 8px;
+  font-size: 12px;
+  margin-top: auto;
+}
+.additional-project-card:focus-within {
+  outline: 2px solid #628876;
+  outline-offset: 2px;
+}
+.evidence-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.6;
+  padding: 4px 9px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: normal;
+}
+.evidence-verified {
+  color: #28513a;
+  background: #e5f0df;
+  border-color: #b6ceb0;
+}
+.evidence-documented {
+  color: #295368;
+  background: #e7f0f4;
+  border-color: #bfd0d9;
+}
+.evidence-illustrative {
+  color: #5d4674;
+  background: #f0eaf4;
+  border-color: #d1c4db;
+}
+.evidence-pending {
+  color: #70511c;
+  background: #f8f0df;
+  border-color: #dbc89f;
+}
+.evidence-guide {
+  border: 1px solid #bacdb6;
+  border-radius: 6px;
+  margin-top: 30px;
+  padding: 8px 22px;
+  background: #f8faf5;
+}
+.evidence-guide summary {
+  min-height: 44px;
+  padding-block: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #294e39;
+}
+.evidence-guide > p {
+  font-size: 13px;
+  color: #506353;
+  margin-top: 10px;
+  max-width: 850px;
+}
+.evidence-legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin: 24px 0 18px;
+}
+.evidence-legend dd {
+  margin: 9px 0 0;
+  font-size: 13px;
+  color: #4b6350;
+  line-height: 1.7;
+}
+.evidence-table .evidence-badge + p {
+  font-size: 11px;
+  margin-top: 8px;
+  min-width: 120px;
+  line-height: 1.6;
+}
+.evidence-checklist {
+  margin-block: 20px;
+  padding-left: 24px;
+}
+.evidence-checklist li {
+  padding-block: 7px;
+}
+.case-story h3[id] {
+  scroll-margin-top: 110px;
+}
+@media (max-width: 1000px) {
+  .additional-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .additional-project-grid,
+  .evidence-legend {
+    grid-template-columns: 1fr;
+  }
+  .additional-card-body h3 {
+    font-size: 28px;
+  }
+  .project-section-nav {
+    gap: 6px 18px;
+  }
+  .evidence-guide {
+    padding-inline: 17px;
+  }
+}
+@media print {
+  .additional-project-grid {
+    display: block;
+  }
+  .additional-project-card {
+    break-inside: avoid;
+    margin-bottom: 20px;
+  }
+  .additional-card-visual {
+    display: none;
+  }
+  .evidence-guide {
+    break-inside: avoid;
+  }
+}
+.evidence-guide-link {
+  margin-block: 0 28px;
+}
+.foot-right {
+  flex-wrap: wrap;
+}
+/* This small synthetic reservation illustration fits without horizontal scrolling. */
+.case-flow .evidence-table {
+  min-width: 0;
+  table-layout: fixed;
+}
+.case-flow .evidence-table tbody th {
+  min-width: 0;
+}
+.case-flow .evidence-table th,
+.case-flow .evidence-table td {
+  padding: 12px 8px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 540px) {
+  .case-flow .evidence-table th,
+  .case-flow .evidence-table td {
+    font-size: 11px;
+  }
+  .case-flow .evidence-table th {
+    letter-spacing: 0;
+  }
+}
